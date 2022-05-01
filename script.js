@@ -99,3 +99,12 @@ buttons.forEach(button => {
         }
     })
 })
+
+buttons.forEach(button => {
+    button.addEventListener('mouseover', () => {
+        button.style.cssText = "filter:  brightness(60%); transition: 0.25s"
+    })
+    button.addEventListener('mouseout', () => {
+        button.style.cssText = "filter: brightness(100%); transition: 0.25s;"
+    })
+})
