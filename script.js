@@ -5,6 +5,12 @@ let num1 = "";
 let num2 = "";
 let operator = "";
 
+function debug() {
+    console.log(num1);
+    console.log(num2);
+    console.log(operator);
+}
+
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         if (!parseInt(button.id)) {
@@ -21,22 +27,22 @@ buttons.forEach(button => {
                     switch (operator) {
                         case "sum":
                             display.textContent = Math.round((parseFloat(num1, 10) + parseFloat(num2, 10)) * 1000000) / 1000000;
-                            num1 = toString(Math.round((parseFloat(num1, 10) + parseFloat(num2, 10)) * 1000000) / 1000000);
+                            num1 = (Math.round((parseFloat(num1, 10) + parseFloat(num2, 10)) * 1000000) / 1000000).toString();
                             num2 = "";
                             break;
                         case "substract":
                             display.textContent = Math.round((parseFloat(num1, 10) - parseFloat(num2, 10)) * 1000000) / 1000000;
-                            num1 = toString(Math.round((parseFloat(num1, 10) - parseFloat(num2, 10)) * 1000000) / 1000000);
+                            num1 = (Math.round((parseFloat(num1, 10) - parseFloat(num2, 10)) * 1000000) / 1000000).toString();
                             num2 = "";
                             break;
                         case "multiply":
                             display.textContent = Math.round((parseFloat(num1, 10) * parseFloat(num2, 10)) * 1000000) / 1000000;
-                            num1 = toString(Math.round((parseFloat(num1, 10) * parseFloat(num2, 10)) * 1000000) / 1000000);
+                            num1 = (Math.round((parseFloat(num1, 10) * parseFloat(num2, 10)) * 1000000) / 1000000).toString();
                             num2 = "";
                             break;
                         case "divide":
                             display.textContent = Math.round((parseFloat(num1, 10) / parseFloat(num2, 10)) * 1000000) / 1000000;
-                            num1 = toString(Math.round((parseFloat(num1, 10) / parseFloat(num2, 10)) * 1000000) / 1000000);
+                            num1 = (Math.round((parseFloat(num1, 10) / parseFloat(num2, 10)) * 1000000) / 1000000).toString();
                             num2 = "";
                     }
                 } else if (button.id === "erase") {
