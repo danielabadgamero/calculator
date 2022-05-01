@@ -11,15 +11,39 @@ buttons.forEach(button => {
             if (button.id === ".") {
                 if (!operator) {
                     num1 += button.id;
+                    display.textContent = num1;
                 } else {
                     num2 += button.id;
+                    display.textContent = num2;
                 }
             } else {
                 if (button.id === "equal") {
                     switch (operator) {
                         case "sum":
-                            display.textContent = parseInt(num1, 10) + parseInt(num2, 10);
+                            display.textContent = Math.round((parseFloat(num1, 10) + parseFloat(num2, 10)) * 1000000) / 1000000;
+                            num1 = toString(Math.round((parseFloat(num1, 10) + parseFloat(num2, 10)) * 1000000) / 1000000);
+                            num2 = "";
+                            break;
+                        case "substract":
+                            display.textContent = Math.round((parseFloat(num1, 10) - parseFloat(num2, 10)) * 1000000) / 1000000;
+                            num1 = toString(Math.round((parseFloat(num1, 10) - parseFloat(num2, 10)) * 1000000) / 1000000);
+                            num2 = "";
+                            break;
+                        case "multiply":
+                            display.textContent = Math.round((parseFloat(num1, 10) * parseFloat(num2, 10)) * 1000000) / 1000000;
+                            num1 = toString(Math.round((parseFloat(num1, 10) * parseFloat(num2, 10)) * 1000000) / 1000000);
+                            num2 = "";
+                            break;
+                        case "divide":
+                            display.textContent = Math.round((parseFloat(num1, 10) / parseFloat(num2, 10)) * 1000000) / 1000000;
+                            num1 = toString(Math.round((parseFloat(num1, 10) / parseFloat(num2, 10)) * 1000000) / 1000000);
+                            num2 = "";
                     }
+                } else if (button.id === "erase") {
+                    display.textContent = "";
+                    num1 = "";
+                    num2 = "";
+                    operator = "";
                 } else {
                     operator = button.id;
                 }
