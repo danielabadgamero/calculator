@@ -65,3 +65,9 @@ div button {
     background-color: rgb(219, 219, 219);
     border: solid 2px rgb(219, 219, 219);
 }
+
+#equal,
+#erase {
+    background-color: #777;
+    border-color: #777;
+}
