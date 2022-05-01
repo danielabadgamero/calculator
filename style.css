@@ -85,3 +85,8 @@ div button {
     justify-content: flex-end;
     align-items: center;
 }
+
+.operation-held {
+    background-color: rgb(173, 173, 173) !important;
+    border-color: rgb(173, 173, 173) !important;
+}
