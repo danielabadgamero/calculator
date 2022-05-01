@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    height: 60vh;
+    display: flex;
+    width: 53vh;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: #222;
+    border-radius: 20px;
+}
+
+.display {
+    background-color: #aaa;
+    height: 20%;
+    width: 90%;
+    margin: 29.406px;
+    border-radius: 5px;
+}
+
+.keyboard {
+    height: 80%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.numbers,
+.operations {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.numbers {
+    width: 272px;
+    justify-content: flex-start;
+}
+
+.operations {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+div button {
+    height: 80px;
+    width: 80px;
+    margin: 5px;
+    border: solid 2px rgb(255, 98, 6);
+    border-radius: 10px;
+    background-color: rgb(255, 98, 6);
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.operations button {
+    background-color: rgb(219, 219, 219);
+    border: solid 2px rgb(219, 219, 219);
+}
+
+button:hover {
+    
+}
