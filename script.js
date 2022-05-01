@@ -22,6 +22,14 @@ buttons.forEach(button => {
                     num2 += button.id;
                     display.textContent = num2;
                 }
+            } else if (button.id === "0") {
+                if (!operator) {
+                    num1 += button.id;
+                    display.textContent = num1;
+                } else {
+                    num2 += button.id;
+                    display.textContent = num2;
+                }
             } else {
                 if (button.id === "equal") {
                     switch (operator) {
