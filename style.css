@@ -71,3 +71,11 @@ div button {
     background-color: #777;
     border-color: #777;
 }
+
+.display {
+    font-size: 72px;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
