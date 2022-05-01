@@ -26,6 +26,9 @@ body {
     width: 90%;
     margin: 29.406px;
     border-radius: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .keyboard {
